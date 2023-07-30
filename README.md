@@ -25,7 +25,7 @@ BDD 行为驱动开发（Behavior Driven Development）
  npx create-react-app react-jest-project --template typescript
 ```
 `create-react-app`创建项目时，自动帮我们配置了jest相关内容，但是因为我们需要从0开始，所以我们要删除默认的jest配置。以方便我们从零开始。
-![Alt text](image.png)
+![Alt text](./images/image.png)
 
 #### 配置jest
 ##### 安装
@@ -77,15 +77,15 @@ test('adds 1 + 2 to equal 3', () => {
 ```
 
 写好了这个函数以及测试用例后，我们执行`yarn test`。就可以看到我们的测试结果
-![Alt text](image-1.png)
+![Alt text](./images/image-1.png)
 
 ##### 更详细的Jest配置
 Jest像typescript，Babel等语言，工具一样，也有属于自己的详细配置。我们执行
 `jest --init`。我们就可以根据自己的选择进行Jest配置。最终会帮我们生成`jest-config-ts`。具体的配置我们可以先不用关心，用到的时候再进行配置。
-![Alt text](image-2.png)
+![Alt text](./images/image-2.png)
 
 配置完成之后，我们再执行`yarn test`。
-![Alt text](image-3.png)
+![Alt text](./images/image-3.png)
 
 我们发现报错了，因为我们的配置文件是`jest.config.ts`。我们都知道，typescript文件是不能被直接执行的，需要先转义成JavaScript才能被执行，按照报错信息，提示我们可以安装`ts-node`来进行转义。
 
@@ -94,5 +94,5 @@ yarn add ts-node -d
 ```
 
 我们再执行`yarn test`
-![Alt text](image-4.png)
+![Alt text](./images/image-4.png)
 我们发现和我们第一次执行`yarn test`产生的效果不一样，这次残生的信息更加详细。是因为我们在执行`jest --init`的时候选择帮我们生成覆盖率报告。这些测试覆盖率的文件放在根目录的`coverage`文件夹下。这些信息我们都可以从`jest.config.ts`中得知。
