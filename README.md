@@ -165,3 +165,46 @@ test('adds 1 + 2 to equal 3', () => {
 `test(name, fn, timeout)`: 等同于`it(name, fn, timeout)`,可以理解为测试的入口，只有这样写，Jest测试进行测试。name就是测试的描述，fn是测试逻辑执行的函数，timeout是超时时间，默认时间是5s。
 
 `expect(测试内容)`: 和Modifiers，Matchers，组成完成的测试条件。虽然叫expect，但是可以理解为测试内容的返回结果，通过Matchers，Modifiers来进行匹配，匹配测试内容是否返回我们想要的结果，以达到测试的目的。
+
+`toBe(val)`: 即`Modifiers`, 和expect一起使用，匹配expect的结果是否符合预期。Jest内置了非常的Modifiers，如下
+
+##### Jest Modifiers
+```ts
+.toBe(value)
+.toHaveBeenCalled()
+.toHaveBeenCalledTimes(number)
+.toHaveBeenCalledWith(arg1, arg2, ...)
+.toHaveBeenLastCalledWith(arg1, arg2, ...)
+.toHaveBeenNthCalledWith(nthCall, arg1, arg2, ....)
+.toHaveReturned()
+.toHaveReturnedTimes(number)
+.toHaveReturnedWith(value)
+.toHaveLastReturnedWith(value)
+.toHaveNthReturnedWith(nthCall, value)
+.toHaveLength(number)
+.toHaveProperty(keyPath, value?)
+.toBeCloseTo(number, numDigits?)
+.toBeDefined()
+.toBeFalsy()
+.toBeGreaterThan(number | bigint)
+.toBeGreaterThanOrEqual(number | bigint)
+.toBeLessThan(number | bigint)
+.toBeLessThanOrEqual(number | bigint)
+.toBeInstanceOf(Class)
+.toBeNull()
+.toBeTruthy()
+.toBeUndefined()
+.toBeNaN()
+.toContain(item)
+.toContainEqual(item)
+.toEqual(value)
+.toMatch(regexp | string)
+.toMatchObject(object)
+.toMatchSnapshot(propertyMatchers?, hint?)
+.toMatchInlineSnapshot(propertyMatchers?, inlineSnapshot)
+.toStrictEqual(value)
+.toThrow(error?)
+.toThrowErrorMatchingSnapshot(hint?)
+.toThrowErrorMatchingInlineSnapshot(inlineSnapshot)
+```
+上面这些Modifiers，见名知意，不做过多的解释，参见官方文档。
