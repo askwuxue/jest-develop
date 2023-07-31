@@ -107,3 +107,43 @@ yarn add ts-node -d
 
 
 我们发现和我们第一次执行`yarn test`产生的效果不一样，这次残生的信息更加详细。是因为我们在执行`jest --init`的时候选择帮我们生成覆盖率报告。这些测试覆盖率的文件放在根目录的`coverage`文件夹下。这些信息我们都可以从`jest.config.ts`中得知。
+
+```ts
+/*
+ * For a detailed explanation regarding each configuration property and type check, visit:
+ * https://jestjs.io/docs/configuration
+ */
+
+export default {
+  // All imported modules in your tests should be mocked automatically
+  // automock: false,
+
+  // Stop running tests after `n` failures
+  // bail: 0,
+
+  // The directory where Jest should store its cached dependency information
+  // cacheDirectory: "/private/var/folders/7c/pbp7lxkx5_l7x8nhdmshk7th0000gn/T/jest_dx",
+
+  // Automatically clear mock calls, instances, contexts and results before every test
+  clearMocks: true,
+
+  // Indicates whether the coverage information should be collected while executing the test
+  collectCoverage: true,
+
+  // An array of glob patterns indicating a set of files for which coverage information should be collected
+  // collectCoverageFrom: undefined,
+
+  // The directory where Jest should output its coverage files
+  coverageDirectory: "coverage",
+
+  // An array of regexp pattern strings used to skip coverage collection
+  // coveragePathIgnorePatterns: [
+  //   "/node_modules/"
+  // ],
+
+  // Indicates which provider should be used to instrument code for coverage
+  coverageProvider: "v8",
+
+  // ....
+};
+```
