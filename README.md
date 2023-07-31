@@ -149,7 +149,6 @@ export default {
 ```
 
 #### Jest 基础语法
-##### 基础匹配器
 
 测试用例
 ```js
@@ -162,3 +161,7 @@ test('adds 1 + 2 to equal 3', () => {
 ```
 
 还记得我们写的第一个测试用例吗？我们配置项目的时候，只是拿了Jest官方文档中起步的一个例子过来，没有做对Jest语法做具体的解释。下面我们就介绍下Jest的基础语法。
+
+`test(name, fn, timeout)`: 等同于`it(name, fn, timeout)`,可以理解为测试的入口，只有这样写，Jest测试进行测试。name就是测试的描述，fn是测试逻辑执行的函数，timeout是超时时间，默认时间是5s。
+
+`expect(测试内容)`: 和Modifiers，Matchers，组成完成的测试条件。虽然叫expect，但是可以理解为测试内容的返回结果，通过Matchers，Modifiers来进行匹配，匹配测试内容是否返回我们想要的结果，以达到测试的目的。
