@@ -147,3 +147,18 @@ export default {
   // ....
 };
 ```
+
+#### Jest 基础语法
+##### 基础匹配器
+
+测试用例
+```js
+// sum.test.js
+const sum = require('./sum');
+
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+```
+
+还记得我们写的第一个测试用例吗？我们配置项目的时候，只是拿了Jest官方文档中起步的一个例子过来，没有做对Jest语法做具体的解释。下面我们就介绍下Jest的基础语法。
