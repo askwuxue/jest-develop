@@ -105,4 +105,5 @@ yarn add ts-node -d
 
   <img width="638" alt="image-4" src="https://github.com/askwuxue/jest-develop/assets/32808762/f46c417a-ccc9-4b1d-bce9-7ca393c1409a">
 
+
 我们发现和我们第一次执行`yarn test`产生的效果不一样，这次残生的信息更加详细。是因为我们在执行`jest --init`的时候选择帮我们生成覆盖率报告。这些测试覆盖率的文件放在根目录的`coverage`文件夹下。这些信息我们都可以从`jest.config.ts`中得知。
