@@ -25,7 +25,8 @@ BDD 行为驱动开发（Behavior Driven Development）
  npx create-react-app react-jest-project --template typescript
 ```
 `create-react-app`创建项目时，自动帮我们配置了jest相关内容，但是因为我们需要从0开始，所以我们要删除默认的jest配置。以方便我们从零开始。
-![Alt text](./images/image.png)
+<img width="1360" alt="image" src="https://github.com/askwuxue/jest-develop/assets/32808762/1d92e223-9e91-4d95-b009-f4499e781596">
+
 
 #### 配置jest
 ##### 安装
@@ -77,15 +78,18 @@ test('adds 1 + 2 to equal 3', () => {
 ```
 
 写好了这个函数以及测试用例后，我们执行`yarn test`。就可以看到我们的测试结果
-![Alt text](./images/image-1.png)
+<img width="399" alt="image-1" src="https://github.com/askwuxue/jest-develop/assets/32808762/b8ba273a-1016-4d57-99bb-e082ff9f39d2">
+
 
 ##### 更详细的Jest配置
 Jest像typescript，Babel等语言，工具一样，也有属于自己的详细配置。我们执行
 `jest --init`。我们就可以根据自己的选择进行Jest配置。最终会帮我们生成`jest-config-ts`。具体的配置我们可以先不用关心，用到的时候再进行配置。
-![Alt text](./images/image-2.png)
+<img width="686" alt="image-2" src="https://github.com/askwuxue/jest-develop/assets/32808762/5641cc90-40cf-4e66-b28e-5072df7d7abb">
+
 
 配置完成之后，我们再执行`yarn test`。
-![Alt text](./images/image-3.png)
+<img width="1235" alt="image-3" src="https://github.com/askwuxue/jest-develop/assets/32808762/d6c8de8a-d077-48aa-8373-9cfbd22fba38">
+
 
 我们发现报错了，因为我们的配置文件是`jest.config.ts`。我们都知道，typescript文件是不能被直接执行的，需要先转义成JavaScript才能被执行，按照报错信息，提示我们可以安装`ts-node`来进行转义。
 
