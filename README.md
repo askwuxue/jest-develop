@@ -207,4 +207,6 @@ test('adds 1 + 2 to equal 3', () => {
 .toThrowErrorMatchingSnapshot(hint?)
 .toThrowErrorMatchingInlineSnapshot(inlineSnapshot)
 ```
-上面这些Modifiers，见名知意，不做过多的解释，参见官方文档。
+上面这些Modifiers，见名知意，不做过多的解释，[参见官方文档](https://jestjs.io/docs/expect)。
+
+
