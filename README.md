@@ -18,7 +18,7 @@ BDD 行为驱动开发（Behavior Driven Development）
 
 #### 项目说明
 1. 使用React，其实和框架关系不大，思想都是一样的。
-2. 语言使用typescript，现在typescript用的比较多，但是JavaScript也是通用的，typescript就是加了一些额外的配置进行解析。
+2. 语言使用Typescript，现在Typescript用的比较多，但是JavaScript也是通用的，Typescript就是加了一些额外的配置进行解析。
 #### 创建项目
 
 ```
