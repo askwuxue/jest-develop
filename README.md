@@ -24,12 +24,12 @@ BDD 行为驱动开发（Behavior Driven Development）
 ```
  npx create-react-app react-jest-project --template typescript
 ```
-`create-react-app`创建项目时，自动帮我们配置了jest相关内容，但是因为我们需要从0开始，所以我们要删除默认的jest配置。以方便我们从零开始。
+`create-react-app`创建项目时，自动帮我们配置了jest相关内容，但是因为我们需要从0开始，所以我们要删除默认的Jest配置。以方便我们从零开始。
 
   <img width="1360" alt="image" src="https://github.com/askwuxue/jest-develop/assets/32808762/1d92e223-9e91-4d95-b009-f4499e781596">
 
 
-#### 配置jest
+#### 配置Jest
 ##### 安装
 
 ```yarn
@@ -95,7 +95,7 @@ Jest像typescript，Babel等语言，工具一样，也有属于自己的详细�
   <img width="1235" alt="image-3" src="https://github.com/askwuxue/jest-develop/assets/32808762/d6c8de8a-d077-48aa-8373-9cfbd22fba38">
 
 
-我们发现报错了，因为我们的配置文件是`jest.config.ts`。我们都知道，typescript文件是不能被直接执行的，需要先转义成JavaScript才能被执行，按照报错信息，提示我们可以安装`ts-node`来进行转义。
+我们发现报错了，因为我们的配置文件是`jest.config.ts`。我们都知道，Typescript文件是不能被直接执行的，需要先转义成JavaScript才能被执行，按照报错信息，提示我们可以安装`ts-node`来进行转义。
 
 ```yarn
 yarn add ts-node -d
