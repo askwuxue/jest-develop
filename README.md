@@ -211,6 +211,12 @@ test('adds 1 + 2 to equal 3', () => {
 
 #### 如何测试组件
 
+安装组件React组件测试库
+
+```yarn
+yarn add -D @testing-library/react
+```
+
 ```tsx
 // src/components/Title.tsx
 import React, { CSSProperties, FC } from "react";
