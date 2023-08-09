@@ -253,6 +253,8 @@ const Title: FC<Props> = (props) => {
 
 export default Title;
 ```
+
+```tsx
 // tests/components/Title.test.tsx
 import React from "react";
 import { render } from "@testing-library/react";
@@ -269,8 +271,6 @@ describe("Title", () => {
     expect(baseElement).toMatchSnapshot();
   });
 });
-```tsx
-
 ```
 
 
