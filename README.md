@@ -217,6 +217,7 @@ test('adds 1 + 2 to equal 3', () => {
 yarn add -D @testing-library/react
 ```
 
+Title组件
 ```tsx
 // src/components/Title.tsx
 import React, { CSSProperties, FC } from "react";
@@ -253,6 +254,25 @@ const Title: FC<Props> = (props) => {
 
 export default Title;
 ```
+
+使用Title组件
+
+```tsx
+
+import Title from './components/Title'
+
+function App() {
+  return (
+    <div className="App">
+      <Title type='large' title='大字'/>
+      <Title type='small' title='小字'/>
+    </div>
+  );
+}
+
+export default App;
+```
+
 
 ```tsx
 
