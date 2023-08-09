@@ -1,9 +1,10 @@
-import React from 'react';
+import Title from './components/Title'
 
 function App() {
   return (
     <div className="App">
-      APP
+      <Title type='large' title='大字'/>
+      <Title type='small' title='小字'/>
     </div>
   );
 }
