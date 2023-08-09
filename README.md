@@ -209,4 +209,62 @@ test('adds 1 + 2 to equal 3', () => {
 ```
 上面这些Modifiers，见名知意，不做过多的解释，[参见官方文档](https://jestjs.io/docs/expect)。
 
+#### 如何测试组件
+
+```tsx
+// src/components/Title.tsx
+import React, { CSSProperties, FC } from "react";
+
+interface Props {
+  type: "large" | "small";
+  title: string;
+}
+
+// large 样式
+const largeStyle: CSSProperties = {
+  fontSize: "2em",
+  color: "red",
+};
+
+// small 样式
+const smallStyle: CSSProperties = {
+  fontSize: "0.5em",
+  color: "green",
+};
+
+// 样式 Mapper
+const styleMapper: Record<"small" | "large", CSSProperties> = {
+  small: smallStyle,
+  large: largeStyle,
+};
+
+// 组件
+const Title: FC<Props> = (props) => {
+  const { title, type } = props;
+
+  return <p style={styleMapper[type]}>{title}</p>;
+};
+
+export default Title;
+```
+// tests/components/Title.test.tsx
+import React from "react";
+import { render } from "@testing-library/react";
+import Title from "./Title";
+
+describe("Title", () => {
+  it("可以正确渲染大字", () => {
+    const { baseElement } = render(<Title type="large" title="大字" />);
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it("可以正确渲染小字", () => {
+    const { baseElement } = render(<Title type="small" title="小字" />);
+    expect(baseElement).toMatchSnapshot();
+  });
+});
+```tsx
+
+```
+
 
