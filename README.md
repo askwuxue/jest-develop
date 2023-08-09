@@ -330,3 +330,12 @@ const smallStyle: CSSProperties = {
   color: "green",
 };
 ```
+
+我们再进行测试
+
+<img width="781" alt="image" src="https://github.com/askwuxue/jest-develop/assets/32808762/24b13e82-a3f9-4dad-aea7-bbf3fd236d4f">
+
+两次快照对比不一致，没有通过测试。
+
+**快照测试的问题**
+如上，我们的确认要修改字体大小，但是因为修改样式导致快照不一致，这个时候我们只能删除之前旧的快照重新生成快照。
