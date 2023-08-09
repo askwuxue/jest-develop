@@ -284,7 +284,9 @@ import Title from "./Title";
 
 describe("Title", () => {
   it("可以正确渲染大字", () => {
+    // render 方法返回一个对象，其中包含了组件的 DOM 对象
     const { baseElement } = render(<Title type="large" title="大字" />);
+    // 通过render获得的对象和我们预期的DOM对象（快照）进行对比
     expect(baseElement).toMatchSnapshot();
   });
 
@@ -296,4 +298,35 @@ describe("Title", () => {
 
 ```
 
+上述Title的测试非常简单，我们简单说一下组件测试的原理。我们知道组件最终会被编译成DOM展示在页面上，组件的每次渲染都可能在页面上产生不同的展示效果，基于这种渲染特性，Jest提出了快照测试。即组件渲染将渲染后的DOM结构拍一个快照，然后每次测试，进行快照的对比来进行测试。
 
+我们执行测试看下
+<img width="334" alt="image" src="https://github.com/askwuxue/jest-develop/assets/32808762/9a6a0df2-c51e-4538-8f94-313d07707e0c">
+
+这次测试为我们生成了`__snapshots__`文件夹并且生成了对应的测试快照
+
+<img width="683" alt="image" src="https://github.com/askwuxue/jest-develop/assets/32808762/1f7a2053-9e8e-4540-92da-fe3747404238">
+
+因为首次执行，我们还没有已经存在的快照，所以首次测试，只生成快照，默认我们测试是提供过，只有后续我们更改了被测试的组件，再进行测试的时候，生成新的快照来和已经存在的快照进行对比判断测试是否通过。比如。我们将Title组件中的样式更行更改
+
+修改前
+
+```tsx
+...
+// small 样式
+const smallStyle: CSSProperties = {
+  fontSize: "0.5em",
+  color: "green",
+};
+```
+
+修改后
+
+```tsx
+...
+// small 样式
+const smallStyle: CSSProperties = {
+  fontSize: "1em",
+  color: "green",
+};
+```
